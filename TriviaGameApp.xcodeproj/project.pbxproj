@@ -19,14 +19,12 @@
 		D05F36A2286BE0940048861C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36A1286BE0940048861C /* LoginViewModel.swift */; };
 		D05F36A4286BE0AB0048861C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36A3286BE0AB0048861C /* LoginView.swift */; };
 		D05F36A7286BE95D0048861C /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36A6286BE95D0048861C /* ProfilePicView.swift */; };
-		D05F36AA286CE6A60048861C /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36A9286CE6A60048861C /* FormModel.swift */; };
-		D05F36AD286CEA0C0048861C /* FormContentBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36AC286CEA0C0048861C /* FormContentBuilderImpl.swift */; };
 		D05F36B0286CEECB0048861C /* UICollectionViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36AF286CEECB0048861C /* UICollectionViewCell+Ext.swift */; };
-		D05F36B3286CEF2E0048861C /* FormButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36B2286CEF2E0048861C /* FormButtonCollectionViewCell.swift */; };
-		D05F36B5286CF0200048861C /* FormTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36B4286CF0200048861C /* FormTextCollectionViewCell.swift */; };
-		D05F36B7286CF4CF0048861C /* FormCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36B6286CF4CF0048861C /* FormCompositionalLayout.swift */; };
 		D05F36B9286D232E0048861C /* Colors+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36B8286D232E0048861C /* Colors+Ext.swift */; };
 		D05F36BD286D577F0048861C /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36BC286D577F0048861C /* ButtonComponent.swift */; };
+		D05F36BF286D7F180048861C /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36BE286D7F180048861C /* TextFieldComponent.swift */; };
+		D05F36C1286D81820048861C /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36C0286D81820048861C /* RegisterController.swift */; };
+		D05F36C32874CD1B0048861C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F36C22874CD1B0048861C /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,14 +61,12 @@
 		D05F36A1286BE0940048861C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D05F36A3286BE0AB0048861C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D05F36A6286BE95D0048861C /* ProfilePicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
-		D05F36A9286CE6A60048861C /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
-		D05F36AC286CEA0C0048861C /* FormContentBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentBuilderImpl.swift; sourceTree = "<group>"; };
 		D05F36AF286CEECB0048861C /* UICollectionViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Ext.swift"; sourceTree = "<group>"; };
-		D05F36B2286CEF2E0048861C /* FormButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButtonCollectionViewCell.swift; sourceTree = "<group>"; };
-		D05F36B4286CF0200048861C /* FormTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextCollectionViewCell.swift; sourceTree = "<group>"; };
-		D05F36B6286CF4CF0048861C /* FormCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCompositionalLayout.swift; sourceTree = "<group>"; };
 		D05F36B8286D232E0048861C /* Colors+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Ext.swift"; sourceTree = "<group>"; };
 		D05F36BC286D577F0048861C /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		D05F36BE286D7F180048861C /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
+		D05F36C0286D81820048861C /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		D05F36C22874CD1B0048861C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,11 +150,11 @@
 		D05F36A0286BE0390048861C /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				D05F36B1286CEF1F0048861C /* Views */,
-				D05F36AB286CE9E80048861C /* Model */,
 				D05F3674286BDBC80048861C /* LoginController.swift */,
 				D05F36A1286BE0940048861C /* LoginViewModel.swift */,
 				D05F36A3286BE0AB0048861C /* LoginView.swift */,
+				D05F36C0286D81820048861C /* RegisterController.swift */,
+				D05F36C22874CD1B0048861C /* RegisterView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -168,17 +164,9 @@
 			children = (
 				D05F36A6286BE95D0048861C /* ProfilePicView.swift */,
 				D05F36BC286D577F0048861C /* ButtonComponent.swift */,
+				D05F36BE286D7F180048861C /* TextFieldComponent.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		D05F36AB286CE9E80048861C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D05F36A9286CE6A60048861C /* FormModel.swift */,
-				D05F36AC286CEA0C0048861C /* FormContentBuilderImpl.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		D05F36AE286CEEA80048861C /* Extensions */ = {
@@ -188,16 +176,6 @@
 				D05F36B8286D232E0048861C /* Colors+Ext.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D05F36B1286CEF1F0048861C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D05F36B2286CEF2E0048861C /* FormButtonCollectionViewCell.swift */,
-				D05F36B4286CF0200048861C /* FormTextCollectionViewCell.swift */,
-				D05F36B6286CF4CF0048861C /* FormCompositionalLayout.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,19 +309,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D05F36AA286CE6A60048861C /* FormModel.swift in Sources */,
 				D05F36A2286BE0940048861C /* LoginViewModel.swift in Sources */,
 				D05F3675286BDBC80048861C /* LoginController.swift in Sources */,
-				D05F36B7286CF4CF0048861C /* FormCompositionalLayout.swift in Sources */,
+				D05F36C1286D81820048861C /* RegisterController.swift in Sources */,
 				D05F3671286BDBC80048861C /* AppDelegate.swift in Sources */,
-				D05F36B5286CF0200048861C /* FormTextCollectionViewCell.swift in Sources */,
 				D05F36A4286BE0AB0048861C /* LoginView.swift in Sources */,
 				D05F3673286BDBC80048861C /* SceneDelegate.swift in Sources */,
-				D05F36B3286CEF2E0048861C /* FormButtonCollectionViewCell.swift in Sources */,
 				D05F36A7286BE95D0048861C /* ProfilePicView.swift in Sources */,
 				D05F36B9286D232E0048861C /* Colors+Ext.swift in Sources */,
 				D05F36BD286D577F0048861C /* ButtonComponent.swift in Sources */,
-				D05F36AD286CEA0C0048861C /* FormContentBuilderImpl.swift in Sources */,
+				D05F36C32874CD1B0048861C /* RegisterView.swift in Sources */,
+				D05F36BF286D7F180048861C /* TextFieldComponent.swift in Sources */,
 				D05F36B0286CEECB0048861C /* UICollectionViewCell+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

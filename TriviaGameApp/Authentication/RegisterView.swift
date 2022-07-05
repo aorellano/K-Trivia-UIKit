@@ -1,26 +1,26 @@
 //
-//  LoginView.swift
+//  RegisterView.swift
 //  TriviaGameApp
 //
-//  Created by Alexis Orellano on 6/28/22.
+//  Created by Alexis Orellano on 7/5/22.
 //
 
 import UIKit
 
-class LoginView: UIView {
-    let appIcon = UIImageView()
+class RegisterView: UIView {
+    let profilePic = UIImageView()
+    let usernameTextField = TextFieldComponent()
     let emailTextField = TextFieldComponent()
     let passwordTextField = TextFieldComponent()
-    let loginButton = ButtonComponent()
     let registerButton = ButtonComponent()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupBackground()
-        setupAppIcon()
+        setupProfilePic()
+        setupUsernameTextField()
         setupEmailTextField()
         setupPasswordTextField()
-        setupLoginButton()
         setupRegisterButton()
     }
     
@@ -28,12 +28,17 @@ class LoginView: UIView {
         backgroundColor = UIColor.primaryColor
     }
     
-    func setupAppIcon() {
-        appIcon.translatesAutoresizingMaskIntoConstraints = false
-        let image = UIImage(named: "icon")
-        appIcon.image = image
-        appIcon.layer.cornerRadius = 90
-        positionAppIcon()
+    func setupProfilePic() {
+        profilePic.translatesAutoresizingMaskIntoConstraints = false
+        profilePic.image = UIImage(systemName: "person.crop.circle.badge.plus")
+        profilePic.tintColor = .white
+        positionProfilePic()
+    }
+    
+    func setupUsernameTextField() {
+        usernameTextField.translatesAutoresizingMaskIntoConstraints = false
+        usernameTextField.placeholder = "Username"
+        positionUsernameTextField()
     }
     
     func setupEmailTextField() {
@@ -48,13 +53,6 @@ class LoginView: UIView {
         positionPasswordTextField()
     }
     
-    func setupLoginButton() {
-        loginButton.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.setTitle("Sign In", for: .normal)
-        loginButton.backgroundColor = UIColor.secondaryColor
-        positionLoginButton()
-    }
-    
     func setupRegisterButton() {
         registerButton.translatesAutoresizingMaskIntoConstraints = false
         registerButton.setTitle("Register", for: .normal)
@@ -62,20 +60,30 @@ class LoginView: UIView {
         positionRegisterButton()
     }
     
-    func positionAppIcon() {
-        addSubview(appIcon)
+    func positionProfilePic() {
+        addSubview(profilePic)
         NSLayoutConstraint.activate([
-            appIcon.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
-            appIcon.heightAnchor.constraint(equalToConstant: 180),
-            appIcon.widthAnchor.constraint(equalToConstant: 180),
-            appIcon.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -5)
+            profilePic.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            profilePic.centerXAnchor.constraint(equalTo: centerXAnchor),
+            profilePic.heightAnchor.constraint(equalToConstant: 150),
+            profilePic.widthAnchor.constraint(equalToConstant: 160)
         ])
     }
     
+    func positionUsernameTextField() {
+        addSubview(usernameTextField)
+        NSLayoutConstraint.activate([
+            usernameTextField.topAnchor.constraint(equalTo: profilePic.bottomAnchor, constant: 60),
+            usernameTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
+            usernameTextField.heightAnchor.constraint(equalToConstant: 40),
+            usernameTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            usernameTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15)
+        ])
+    }
     func positionEmailTextField() {
         addSubview(emailTextField)
         NSLayoutConstraint.activate([
-            emailTextField.topAnchor.constraint(equalTo: appIcon.bottomAnchor, constant: 60),
+            emailTextField.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 10),
             emailTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             emailTextField.heightAnchor.constraint(equalToConstant: 40),
             emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
@@ -94,20 +102,10 @@ class LoginView: UIView {
         ])
     }
     
-    func positionLoginButton() {
-        addSubview(loginButton)
-        NSLayoutConstraint.activate([
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
-            loginButton.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
-            loginButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
-            loginButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
-    }
-    
     func positionRegisterButton() {
         addSubview(registerButton)
         NSLayoutConstraint.activate([
-            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 10),
+            registerButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
             registerButton.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
             registerButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
             registerButton.heightAnchor.constraint(equalToConstant: 50)
